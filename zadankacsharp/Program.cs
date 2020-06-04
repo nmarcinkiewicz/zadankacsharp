@@ -10,9 +10,9 @@ namespace zadankacsharp
     {
         static void Main(string[] args)
         {
-            //Zadanie24();
-            //Zadanie25();
-            //Zadanie26();
+            Zadanie24();
+            Zadanie25();
+            Zadanie26();
             Zadanie27();
         }
 
