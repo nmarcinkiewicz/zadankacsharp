@@ -18,17 +18,35 @@ namespace zadankacsharp
             Console.WriteLine("wprowadź rok w formacie YYYY");
             userInputYear = Convert.ToInt32(Console.ReadLine());
 
-            if (userInputYear % 4 == 0)
+            var a = userInputYear % 400 == 0;
+            var b = userInputYear % 100 == 0;
+            var c = userInputYear % 4 == 0;
+
+            if ( c && ( a  || !b ))
             {
-                if (!(userInputYear % 100 == 0))
-                {
-                    if (userInputYear % 400 ==0)
-                    {
-                        Console.WriteLine("Podany {0} rok jest rokiem przestępnym", userInputYear);
-                    }
-                }
+                Console.WriteLine("jest przestępny");
             }
-            Console.WriteLine("{0} nie jest rokiem przestępnym", userInputYear);
+            else
+            {
+                Console.WriteLine("NIE JEST przestępny");
+            }
+
+            //if (userInputYear % 4 == 0)
+            //{
+            //    if ((userInputYear % 100 == 0 ^ userInputYear % 400 == 0))
+            //    {
+            //            Console.WriteLine("{0} nie jest rokiem przestępnym", userInputYear);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("{0} rok jest rokiem przestępnym", userInputYear);
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("{0} nie jest rokiem przestępnym", userInputYear);
+            //}
+          
             Console.ReadLine();
         }
     }
